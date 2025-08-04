@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConstAgro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #f8f9fa;
         }
+
         .hero-section {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
         }
+
         .tab-content {
             display: none;
         }
+
         .tab-content.active {
             display: block;
         }
+
         .property-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .property-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
         .bank-logo {
             filter: grayscale(100%);
             opacity: 0.7;
             transition: all 0.3s ease;
         }
+
         .bank-logo:hover {
             filter: grayscale(0%);
             opacity: 1;
         }
+
         .whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -46,29 +56,36 @@
             z-index: 1000;
             animation: pulse 2s infinite;
         }
+
         @keyframes pulse {
             0% {
                 transform: scale(1);
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
+
             70% {
                 transform: scale(1.05);
                 box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
             }
+
             100% {
                 transform: scale(1);
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
+
         .modal {
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
+
         .testimonial-card {
             transition: transform 0.3s ease;
         }
+
         .testimonial-card:hover {
             transform: translateY(-5px);
         }
+
         .price-tag {
             position: absolute;
             top: 15px;
@@ -79,16 +96,20 @@
             border-radius: 5px;
             font-weight: bold;
         }
+
         .gallery-item {
             overflow: hidden;
             position: relative;
         }
+
         .gallery-item img {
             transition: transform 0.5s ease;
         }
+
         .gallery-item:hover img {
             transform: scale(1.1);
         }
+
         .gallery-overlay {
             position: absolute;
             bottom: 0;
@@ -100,27 +121,34 @@
             transform: translateY(100%);
             transition: transform 0.3s ease;
         }
+
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
         }
+
         .star-rating {
             color: #FFD700;
         }
+
         .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
         .service-icon {
             transition: transform 0.3s ease;
         }
+
         .service-card:hover .service-icon {
             transform: scale(1.1);
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -133,36 +161,40 @@
             </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="tab-link active" data-tab="home">Home</a></li>
-                    <li><a href="#" class="tab-link" data-tab="residencial">Residencial</a></li>
-                    <li><a href="#" class="tab-link" data-tab="comercial">Comercial</a></li>
-                    <li><a href="#" class="tab-link" data-tab="projetos">Projetos</a></li>
-                    <li><a href="#" class="tab-link" data-tab="financiamento">Financiamento</a></li>
-                    <li><a href="#" class="tab-link" data-tab="depoimentos">Depoimentos</a></li>
-                    <li><a href="#" class="tab-link" data-tab="contato">Contato</a></li>
+                    <li><a href="index.html" class="tab-link active" data-tab="home">Home</a></li>
+                    <li><a href="residencial.html" class="tab-link" data-tab="residencial">Residencial</a></li>
+                    <li><a href="comercial.html" class="tab-link" data-tab="comercial">Comercial</a></li>
+                    <li><a href="projetos.html" class="tab-link" data-tab="projetos">Projetos</a></li>
+                    <li><a href="financiamento.html" class="tab-link" data-tab="financiamento">Financiamento</a></li>
+                    <li><a href="depoimentos.html" class="tab-link" data-tab="depoimentos">Depoimentos</a></li>
+                    <li><a href="contato.html" class="tab-link" data-tab="contato">Contato</a></li>
                 </ul>
             </nav>
             <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
         <div class="md:hidden hidden" id="mobile-menu">
             <ul class="bg-white px-4 pt-2 pb-4 space-y-2">
-                <li><a href="#" class="tab-link block py-2" data-tab="home">Home</a></li>
-                <li><a href="#" class="tab-link block py-2" data-tab="residencial">Residencial</a></li>
-                <li><a href="#" class="tab-link block py-2" data-tab="comercial">Comercial</a></li>
-                <li><a href="#" class="tab-link block py-2" data-tab="projetos">Projetos</a></li>
-                <li><a href="#" class="tab-link block py-2" data-tab="financiamento">Financiamento</a></li>
-                <li><a href="#" class="tab-link block py-2" data-tab="depoimentos">Depoimentos</a></li>
-                <li><a href="#" class="tab-link block py-2" data-tab="contato">Contato</a></li>
+                <li><a href="index.html" class="tab-link block py-2" data-tab="home">Home</a></li>
+                <li><a href="residencial.html" class="tab-link block py-2" data-tab="residencial">Residencial</a></li>
+                <li><a href="comercial.html" class="tab-link block py-2" data-tab="comercial">Comercial</a></li>
+                <li><a href="projetos.html" class="tab-link block py-2" data-tab="projetos">Projetos</a></li>
+                <li><a href="financiamento.html" class="tab-link block py-2" data-tab="financiamento">Financiamento</a></li>
+                <li><a href="depoimentos.html" class="tab-link block py-2" data-tab="depoimentos">Depoimentos</a></li>
+                <li><a href="contato.html" class="tab-link block py-2" data-tab="contato">Contato</a></li>
             </ul>
         </div>
     </header>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/553391080831?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20imóveis%20da%20Const%20Agro." class="whatsapp-button bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg" target="_blank">
+    <a href="https://wa.me/553391080831?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20imóveis%20da%20Const%20Agro."
+        class="whatsapp-button bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg"
+        target="_blank">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
@@ -176,9 +208,15 @@
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">Encontre o imóvel dos seus sonhos</h1>
                     <p class="text-xl mb-8">Há mais de 11 anos realizando sonhos e construindo histórias</p>
                     <div class="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="#" class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="residencial">Imóveis Residenciais</a>
-                        <a href="#" class="tab-link bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="comercial">Imóveis Comerciais</a>
-                        <a href="#" class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="projetos">Projetos e Construção</a>
+                        <a href="#"
+                            class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="residencial">Imóveis Residenciais</a>
+                        <a href="#"
+                            class="tab-link bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="comercial">Imóveis Comerciais</a>
+                        <a href="#"
+                            class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="projetos">Projetos e Construção</a>
                     </div>
                 </div>
             </section>
@@ -188,42 +226,50 @@
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Nossos Serviços</h2>
                     <p class="text-center text-gray-600 mb-12">Soluções completas para você e seu negócio</p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Service 1 -->
                         <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <div
+                                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
                                 <i class="fas fa-home text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">Venda de Imóveis</h3>
-                            <p class="text-gray-600">Encontre o imóvel ideal para você e sua família com nossa ampla carteira de opções.</p>
+                            <p class="text-gray-600">Encontre o imóvel ideal para você e sua família com nossa ampla
+                                carteira de opções.</p>
                         </div>
-                        
+
                         <!-- Service 2 -->
                         <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <div
+                                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
                                 <i class="fas fa-key text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">Locação</h3>
-                            <p class="text-gray-600">Alugue com segurança e tranquilidade. Administramos todo o processo para você.</p>
+                            <p class="text-gray-600">Alugue com segurança e tranquilidade. Administramos todo o processo
+                                para você.</p>
                         </div>
-                        
+
                         <!-- Service 3 -->
                         <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <div
+                                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
                                 <i class="fas fa-drafting-compass text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">Projetos</h3>
-                            <p class="text-gray-600">Projetos arquitetônicos, estruturais, elétricos e hidrossanitários com excelência.</p>
+                            <p class="text-gray-600">Projetos arquitetônicos, estruturais, elétricos e hidrossanitários
+                                com excelência.</p>
                         </div>
-                        
+
                         <!-- Service 4 -->
                         <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <div
+                                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
                                 <i class="fas fa-hard-hat text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2">Construção</h3>
-                            <p class="text-gray-600">Construímos seu sonho do papel à realidade, com qualidade e dentro do prazo.</p>
+                            <p class="text-gray-600">Construímos seu sonho do papel à realidade, com qualidade e dentro
+                                do prazo.</p>
                         </div>
                     </div>
                 </div>
@@ -234,13 +280,15 @@
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Imóveis em Destaque</h2>
                     <p class="text-center text-gray-600 mb-12">Confira nossas melhores oportunidades do momento</p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Property 1 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
                                 <img src="casa2.jpeg" alt="Casa em Condomínio" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Destaque</div>
+                                <div
+                                    class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Destaque</div>
                                 <div class="price-tag">R$ 450.000</div>
                             </div>
                             <div class="p-6">
@@ -256,7 +304,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Casa em Condomínio - Jardim América">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Casa em Condomínio - Jardim América"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Casa%20em%20Condomínio%20-%20Jardim%20América','_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -282,7 +333,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Apartamento Novo - Centro">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Apartamento Novo - Centro"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Apartamento%20Novo%20-%20Centro','_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -292,8 +346,11 @@
                         <!-- Property 3 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://img.freepik.com/fotos-premium/interior-de-um-grande-edificio-industrial-ou-fabrica-com-construcoes-de-aco_140555-56.jpg?semt=ais_hybrid&w=740" alt="Sala Comercial" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Comercial</div>
+                                <img src="https://img.freepik.com/fotos-premium/interior-de-um-grande-edificio-industrial-ou-fabrica-com-construcoes-de-aco_140555-56.jpg?semt=ais_hybrid&w=740"
+                                    alt="Sala Comercial" class="h-64 w-full object-cover">
+                                <div
+                                    class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Comercial</div>
                                 <div class="price-tag">R$ 1.800/mês</div>
                             </div>
                             <div class="p-6">
@@ -309,7 +366,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Sala Comercial - Centro Empresarial">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Sala Comercial - Centro Empresarial"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Sala%20Comercial%20-%20Centro%20Empresarial','_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -317,7 +377,9 @@
                         </div>
                     </div>
                     <div class="text-center mt-10">
-                        <a href="#" class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="residencial">Ver todos os imóveis</a>
+                        <a href="#"
+                            class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="residencial">Ver todos os imóveis</a>
                     </div>
                 </div>
             </section>
@@ -327,20 +389,26 @@
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Projetos em Destaque</h2>
                     <p class="text-center text-gray-600 mb-12">Conheça alguns dos nossos projetos e construções</p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Project 1 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
                                 <img src="predio2.jpeg" alt="Projeto Arquitetônico" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Arquitetônico</div>
+                                <div
+                                    class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Arquitetônico</div>
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Residência Moderna</h3>
-                                <p class="text-gray-600 mb-4">Projeto arquitetônico completo para residência de alto padrão</p>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    Ver detalhes
+                                <p class="text-gray-600 mb-4">Projeto arquitetônico completo para residência de alto
+                                    padrão</p>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Residência Moderna"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
                                 </button>
                             </div>
                         </div>
@@ -349,14 +417,20 @@
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
                                 <img src="casa3.jpeg" alt="Projeto 3D" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Renderização 3D</div>
+                                <div
+                                    class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Renderização 3D</div>
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Visualização 3D</h3>
-                                <p class="text-gray-600 mb-4">Renderizações realistas para seu projeto antes da construção</p>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    Ver detalhes
+                                <p class="text-gray-600 mb-4">Renderizações realistas para seu projeto antes da
+                                    construção</p>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Visualização 3D"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
                                 </button>
                             </div>
                         </div>
@@ -365,20 +439,28 @@
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
                                 <img src="pisina2.jpeg" alt="Construção" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Construção</div>
+                                <div
+                                    class="absolute top-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Construção</div>
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Execução de Obra</h3>
-                                <p class="text-gray-600 mb-4">Construção completa com acompanhamento técnico especializado</p>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300">
-                                    <i class="fas fa-info-circle"></i>
-                                    Ver detalhes
+                                <p class="text-gray-600 mb-4">Construção completa com acompanhamento técnico
+                                    especializado</p>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Execução de Obra"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="text-center mt-10">
-                        <a href="#" class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="projetos">Ver todos os projetos</a>
+                        <a href="#"
+                            class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="projetos">Ver todos os projetos</a>
                     </div>
                 </div>
             </section>
@@ -387,8 +469,9 @@
             <section class="py-16 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">O que nossos clientes dizem</h2>
-                    <p class="text-center text-gray-600 mb-12">Depoimentos de quem já realizou o sonho da casa própria com a Casa Certa</p>
-                    
+                    <p class="text-center text-gray-600 mb-12">Depoimentos de quem já realizou o sonho da casa própria
+                        com a Casa Certa</p>
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Testimonial 1 -->
                         <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
@@ -407,7 +490,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-gray-600">"Graças à Casa Certa, consegui realizar o sonho da casa própria. O atendimento do Simão foi excepcional, me ajudando em todo o processo de financiamento. Recomendo a todos!"</p>
+                            <p class="text-gray-600">"Consegui realizar o sonho da casa própria. O atendimento do Simão
+                                foi excepcional, me ajudando em todo o processo de financiamento. Recomendo a todos!"
+                            </p>
                         </div>
 
                         <!-- Testimonial 2 -->
@@ -427,7 +512,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-gray-600">"Encontrei o apartamento perfeito para minha família com a Casa Certa. O processo foi rápido e sem complicações. A equipe é muito profissional e atenciosa. Super indico!"</p>
+                            <p class="text-gray-600">"Encontrei o apartamento perfeito para minha família com a Casa
+                                Certa. O processo foi rápido e sem complicações. A equipe é muito profissional e
+                                atenciosa. Super indico!"</p>
                         </div>
 
                         <!-- Testimonial 3 -->
@@ -447,12 +534,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-gray-600">"Contratei a Casa Certa para fazer o projeto da minha casa e estou extremamente satisfeito. Profissionais competentes que entenderam exatamente o que eu queria. O resultado ficou incrível!"</p>
+                            <p class="text-gray-600">"Contratei a ConstAgro para fazer o projeto da minha casa e estou
+                                extremamente satisfeito. Profissionais competentes que entenderam exatamente o que eu
+                                queria. O resultado ficou incrível!"</p>
                         </div>
                     </div>
-                    
+
                     <div class="text-center mt-10">
-                        <a href="#" class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="depoimentos">Ver mais depoimentos</a>
+                        <a href="#"
+                            class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="depoimentos">Ver mais depoimentos</a>
                     </div>
                 </div>
             </section>
@@ -461,41 +552,49 @@
             <section class="py-16 bg-white">
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Nossos Parceiros Financeiros</h2>
-                    <p class="text-center text-gray-600 mb-12">Trabalhamos com os melhores bancos para facilitar seu financiamento</p>
-                    
+                    <p class="text-center text-gray-600 mb-12">Trabalhamos com os melhores bancos para facilitar seu
+                        financiamento</p>
+
                     <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                         <!-- Banco do Brasil -->
                         <div class="bank-logo w-32 h-20 flex items-center justify-center">
-                            <img src="https://images.seeklogo.com/logo-png/1/3/banco-do-brasil-logo-png_seeklogo-16042.png" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
+                            <img src="https://images.seeklogo.com/logo-png/1/3/banco-do-brasil-logo-png_seeklogo-16042.png"
+                                class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
                             <span class="ml-2 font-semibold text-gray-700">Banco do Brasil</span>
                         </div>
 
                         <!-- Sicoob -->
                         <div class="bank-logo w-32 h-20 flex items-center justify-center">
-                            <img src="https://images.seeklogo.com/logo-png/20/2/sicoob-novo-logo-png_seeklogo-209397.png" alt="Sicoob" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
+                            <img src="https://images.seeklogo.com/logo-png/20/2/sicoob-novo-logo-png_seeklogo-209397.png"
+                                alt="Sicoob" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
                             <span class="ml-2 font-semibold text-gray-700">Sicoob</span>
                         </div>
 
                         <!-- Santander -->
                         <div class="bank-logo w-32 h-20 flex items-center justify-center">
-                            <img src="https://logodix.com/logo/544419.jpg" alt="Santander" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
+                            <img src="https://logodix.com/logo/544419.jpg" alt="Santander"
+                                class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
                             <span class="ml-2 font-semibold text-gray-700">Santander</span>
                         </div>
 
                         <!-- Itaú -->
                         <div class="bank-logo w-32 h-20 flex items-center justify-center">
-                            <img src="https://br.nimbleevolution.com/wp-content/uploads/2024/06/itau-logo@3x.png" alt="Itaú" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
+                            <img src="https://br.nimbleevolution.com/wp-content/uploads/2024/06/itau-logo@3x.png"
+                                alt="Itaú" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
                             <span class="ml-2 font-semibold text-gray-700">Itaú</span>
                         </div>
 
                         <!-- Caixa -->
                         <div class="bank-logo w-32 h-20 flex items-center justify-center">
-                            <img src="https://logospng.org/download/caixa-economica-federal/logo-caixa-economica-federal-4096.png" alt="Caixa" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
+                            <img src="https://logospng.org/download/caixa-economica-federal/logo-caixa-economica-federal-4096.png"
+                                alt="Caixa" class="h-12 object-contain bg-white p-1 rounded" loading="lazy" />
                             <span class="ml-2 font-semibold text-gray-700">Caixa</span>
                         </div>
                     </div>
                     <div class="text-center mt-10">
-                        <a href="#" class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" data-tab="financiamento">Saiba mais sobre financiamentos</a>
+                        <a href="#"
+                            class="tab-link inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            data-tab="financiamento">Saiba mais sobre financiamentos</a>
                     </div>
                 </div>
             </section>
@@ -506,19 +605,31 @@
                     <div class="flex flex-col md:flex-row items-center gap-10">
                         <div class="md:w-1/2">
                             <h2 class="text-3xl font-bold mb-6">Casa Certa Imobiliária</h2>
-                            <p class="text-gray-600 mb-4">Há mais de 11 anos no mercado imobiliário, a Casa Certa se destaca pelo atendimento personalizado e pela excelência em encontrar o imóvel perfeito para cada cliente.</p>
-                            <p class="text-gray-600 mb-6">Nossa equipe, liderada pelo Sr. Simão, está pronta para ajudar você a realizar o sonho da casa própria ou encontrar o espaço ideal para o seu negócio. Além disso, oferecemos serviços completos de projetos e construção.</p>
+                            <p class="text-gray-600 mb-4">Há mais de 11 anos no mercado imobiliário, a Casa Certa se
+                                destaca pelo atendimento personalizado e pela excelência em encontrar o imóvel perfeito
+                                para cada cliente.</p>
+                            <p class="text-gray-600 mb-6">Nossa equipe, liderada pelo Sr. Simão, está pronta para ajudar
+                                você a realizar o sonho da casa própria ou encontrar o espaço ideal para o seu negócio.
+                                Além disso, oferecemos serviços completos de projetos e construção.</p>
                             <div class="flex gap-4">
-                                <a href="#" class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300" data-tab="contato">Entre em contato</a>
-                                <a href="#" class="tab-link border border-green-600 text-green-600 hover:bg-green-50 font-bold py-2 px-4 rounded-lg transition duration-300" data-tab="projetos">Nossos Projetos</a>
+                                <a href="#"
+                                    class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300"
+                                    data-tab="contato">Entre em contato</a>
+                                <a href="#"
+                                    class="tab-link border border-green-600 text-green-600 hover:bg-green-50 font-bold py-2 px-4 rounded-lg transition duration-300"
+                                    data-tab="projetos">Nossos Projetos</a>
                             </div>
                         </div>
                         <div class="md:w-1/2 flex justify-center">
-                            <div class="w-full max-w-md h-80 bg-white rounded-lg flex flex-col items-center justify-center p-6 shadow-md">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Simão Oliveira" class="w-24 h-24 rounded-full object-cover mb-4">
+                            <div
+                                class="w-full max-w-md h-80 bg-white rounded-lg flex flex-col items-center justify-center p-6 shadow-md">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                    alt="Simão Oliveira" class="w-24 h-24 rounded-full object-cover mb-4">
                                 <h3 class="text-xl font-bold mb-2">Simão Oliveira</h3>
-                                <p class="text-gray-600 text-center mb-4">Fundador e Diretor da Casa Certa Imobiliária</p>
-                                <p class="text-gray-600 text-center">"Nosso compromisso é realizar sonhos e construir histórias através de negócios imobiliários seguros e transparentes."</p>
+                                <p class="text-gray-600 text-center mb-4">Fundador e Diretor da Casa Certa Imobiliária
+                                </p>
+                                <p class="text-gray-600 text-center">"Nosso compromisso é realizar sonhos e construir
+                                    histórias através de negócios imobiliários seguros e transparentes."</p>
                             </div>
                         </div>
                     </div>
@@ -530,12 +641,14 @@
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Avaliações no Google</h2>
                     <p class="text-center text-gray-600 mb-8">Somos uma empresa 5 estrelas no Google</p>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
                         <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center">
-                                <svg class="w-8 h-8 text-red-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                                    <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                                <svg class="w-8 h-8 text-red-500 mr-2" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                                    <path
+                                        d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
                                 </svg>
                                 <span class="font-bold text-lg">Google Reviews</span>
                             </div>
@@ -550,10 +663,12 @@
                                 <span class="font-bold">5.0</span>
                             </div>
                         </div>
-                        
+
                         <div class="border-t border-gray-200 pt-4">
                             <p class="text-gray-600 mb-4">Baseado em 48 avaliações</p>
-                            <a href="https://g.page/r/casa-certa-imobiliaria" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Ver todas as avaliações</a>
+                            <a href="https://g.page/r/casa-certa-imobiliaria" target="_blank"
+                                class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Ver
+                                todas as avaliações</a>
                         </div>
                     </div>
                 </div>
@@ -564,75 +679,77 @@
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Galeria de Imóveis</h2>
                     <p class="text-center text-gray-600 mb-12">Confira alguns dos nossos imóveis disponíveis</p>
-                    
+
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Casa em Condomínio" class="h-48 w-full object-cover">
+                            <img src="casa7.jpeg" alt="Casa em Condomínio" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Casa em Condomínio</h4>
                                 <p class="text-sm">3 quartos • 150m²</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Apartamento" class="h-48 w-full object-cover">
+                            <img src="quarto.jpeg" alt="Apartamento" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Apartamento</h4>
-                                <p class="text-sm">2 quartos • 65m²</p>
+                                <p class="text-sm">4 quartos • 65m²</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Sala Comercial" class="h-48 w-full object-cover">
+                            <img src="area-lazer1.jpeg" alt="Sala Comercial" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
-                                <h4 class="font-bold">Sala Comercial</h4>
+                                <h4 class="font-bold">Área Lazerl</h4>
                                 <p class="text-sm">45m² • Centro</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Terreno" class="h-48 w-full object-cover">
+                            <img src="casa8.jpeg" alt="Terreno" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Terreno</h4>
                                 <p class="text-sm">500m² • Plano</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Casa Temporada" class="h-48 w-full object-cover">
+                            <img src="cozinha8.jpeg" alt="Casa Temporada" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Casa Temporada</h4>
                                 <p class="text-sm">4 quartos • Piscina</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sítio" class="h-48 w-full object-cover">
+                            <img src="galpao02.jpeg" alt="Sítio" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Sítio</h4>
                                 <p class="text-sm">5 quartos • Lago</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80" alt="Loja" class="h-48 w-full object-cover">
+                            <img src="cozinha9.jpeg" alt="Loja" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Loja</h4>
                                 <p class="text-sm">60m² • Shopping</p>
                             </div>
                         </div>
-                        
+
                         <div class="gallery-item rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1553522911-d9f21af05d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galpão" class="h-48 w-full object-cover">
+                            <img src="cozinha4.jpeg" alt="Galpão" class="h-48 w-full object-cover">
                             <div class="gallery-overlay">
                                 <h4 class="font-bold">Galpão</h4>
                                 <p class="text-sm">500m² • Industrial</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="text-center mt-10">
-                        <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Ver galeria completa</a>
+                        <a href="#"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Ver
+                            galeria completa</a>
                     </div>
                 </div>
             </section>
@@ -643,7 +760,7 @@
             <section class="py-12 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h1 class="text-3xl font-bold mb-8">Projetos e Construção</h1>
-                    
+
                     <!-- Services -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                         <!-- Service 1 -->
@@ -652,7 +769,8 @@
                                 <i class="fas fa-drafting-compass text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-3">Projetos Arquitetônicos</h3>
-                            <p class="text-gray-600 mb-4">Desenvolvemos projetos arquitetônicos personalizados para residências, comércios e indústrias, atendendo às suas necessidades e sonhos.</p>
+                            <p class="text-gray-600 mb-4">Desenvolvemos projetos arquitetônicos personalizados para
+                                residências, comércios e indústrias, atendendo às suas necessidades e sonhos.</p>
                             <ul class="text-gray-600 mb-4 space-y-2">
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -667,7 +785,10 @@
                                     Projeto legal para aprovação
                                 </li>
                             </ul>
-                            <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Projetos Arquitetônicos">
+                            <button
+                                class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                data-property="Projetos Arquitetônicos"
+                                onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Projetos%20Arquitetônicos','_blank')">
                                 <i class="fab fa-whatsapp"></i>
                                 Solicitar orçamento
                             </button>
@@ -679,7 +800,8 @@
                                 <i class="fas fa-ruler-combined text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-3">Projetos Estruturais</h3>
-                            <p class="text-gray-600 mb-4">Elaboramos projetos estruturais seguros e econômicos, garantindo a estabilidade e durabilidade da sua construção.</p>
+                            <p class="text-gray-600 mb-4">Elaboramos projetos estruturais seguros e econômicos,
+                                garantindo a estabilidade e durabilidade da sua construção.</p>
                             <ul class="text-gray-600 mb-4 space-y-2">
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -694,7 +816,10 @@
                                     Detalhamento de armaduras
                                 </li>
                             </ul>
-                            <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Projetos Estruturais">
+                            <button
+                                class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                data-property="Projetos Estruturais"
+                                onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Projetos%20Estruturais','_blank')">
                                 <i class="fab fa-whatsapp"></i>
                                 Solicitar orçamento
                             </button>
@@ -706,7 +831,8 @@
                                 <i class="fas fa-bolt text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-3">Projetos Elétricos</h3>
-                            <p class="text-gray-600 mb-4">Desenvolvemos projetos elétricos eficientes e seguros, atendendo às normas técnicas e às necessidades do seu imóvel.</p>
+                            <p class="text-gray-600 mb-4">Desenvolvemos projetos elétricos eficientes e seguros,
+                                atendendo às normas técnicas e às necessidades do seu imóvel.</p>
                             <ul class="text-gray-600 mb-4 space-y-2">
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -721,7 +847,10 @@
                                     Quadro de distribuição
                                 </li>
                             </ul>
-                            <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Projetos Elétricos">
+                            <button
+                                class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                data-property="Projetos Elétricos"
+                                onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Projetos%20Elétricos','_blank')">
                                 <i class="fab fa-whatsapp"></i>
                                 Solicitar orçamento
                             </button>
@@ -733,7 +862,8 @@
                                 <i class="fas fa-faucet text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-3">Projetos Hidrossanitários</h3>
-                            <p class="text-gray-600 mb-4">Elaboramos projetos hidráulicos e sanitários completos, garantindo conforto e funcionalidade para sua edificação.</p>
+                            <p class="text-gray-600 mb-4">Elaboramos projetos hidráulicos e sanitários completos,
+                                garantindo conforto e funcionalidade para sua edificação.</p>
                             <ul class="text-gray-600 mb-4 space-y-2">
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -748,7 +878,10 @@
                                     Águas pluviais
                                 </li>
                             </ul>
-                            <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Projetos Hidrossanitários">
+                            <button
+                                class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                data-property="Projetos Hidrossanitários"
+                                onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Projetos%20Hidrossanitários','_blank')">
                                 <i class="fab fa-whatsapp"></i>
                                 Solicitar orçamento
                             </button>
@@ -760,7 +893,8 @@
                                 <i class="fas fa-cube text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-3">Renderizações 3D</h3>
-                            <p class="text-gray-600 mb-4">Criamos imagens realistas do seu projeto antes da construção, permitindo visualizar todos os detalhes e fazer ajustes.</p>
+                            <p class="text-gray-600 mb-4">Criamos imagens realistas do seu projeto antes da construção,
+                                permitindo visualizar todos os detalhes e fazer ajustes.</p>
                             <ul class="text-gray-600 mb-4 space-y-2">
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -775,7 +909,10 @@
                                     Tour virtual 360°
                                 </li>
                             </ul>
-                            <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Renderizações 3D">
+                            <button
+                                class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                data-property="Renderizações 3D"
+                                onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Renderizações%203D','_blank')">
                                 <i class="fab fa-whatsapp"></i>
                                 Solicitar orçamento
                             </button>
@@ -787,7 +924,8 @@
                                 <i class="fas fa-file-signature text-green-600 text-2xl"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-3">Regularizações</h3>
-                            <p class="text-gray-600 mb-4">Regularizamos sua construção junto aos órgãos competentes, garantindo a legalidade do seu imóvel.</p>
+                            <p class="text-gray-600 mb-4">Regularizamos sua construção junto aos órgãos competentes,
+                                garantindo a legalidade do seu imóvel.</p>
                             <ul class="text-gray-600 mb-4 space-y-2">
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -802,7 +940,10 @@
                                     Averbação na matrícula
                                 </li>
                             </ul>
-                            <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Regularizações">
+                            <button
+                                class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                data-property="Regularizações"
+                                onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Regularizações','_blank')">
                                 <i class="fab fa-whatsapp"></i>
                                 Solicitar orçamento
                             </button>
@@ -814,11 +955,14 @@
                     <div class="bg-white p-6 rounded-lg shadow-md mb-12">
                         <div class="flex flex-col md:flex-row gap-8">
                             <div class="md:w-1/2">
-                                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Construção" class="w-full h-80 object-cover rounded-lg mb-4">
+                                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                                    alt="Construção" class="w-full h-80 object-cover rounded-lg mb-4">
                             </div>
                             <div class="md:w-1/2">
                                 <h3 class="text-xl font-bold mb-4">Execução de Obras</h3>
-                                <p class="text-gray-600 mb-4">A Casa Certa oferece serviços completos de construção, desde a fundação até o acabamento final. Trabalhamos com profissionais qualificados e materiais de qualidade para garantir o melhor resultado.</p>
+                                <p class="text-gray-600 mb-4">A Casa Certa oferece serviços completos de construção,
+                                    desde a fundação até o acabamento final. Trabalhamos com profissionais qualificados
+                                    e materiais de qualidade para garantir o melhor resultado.</p>
                                 <ul class="text-gray-600 mb-6 space-y-2">
                                     <li class="flex items-center">
                                         <i class="fas fa-check text-green-500 mr-2"></i>
@@ -841,7 +985,10 @@
                                         Orçamentos detalhados
                                     </li>
                                 </ul>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Construção">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Construção"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Construção','_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Solicitar orçamento
                                 </button>
@@ -854,91 +1001,151 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                         <!-- Project 1 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80" alt="Residência Moderna" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80"
+                                alt="Residência Moderna" class="w-full h-64 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Residência Moderna</h3>
-                                <p class="text-gray-600 mb-4">Projeto arquitetônico e construção de residência de alto padrão com 4 suítes, piscina e área gourmet.</p>
+                                <p class="text-gray-600 mb-4">Projeto arquitetônico e construção de residência de alto
+                                    padrão com 4 suítes, piscina e área gourmet.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Estrutural</span>
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Construção</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Estrutural</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Construção</span>
                                 </div>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">Ver detalhes</button>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Residência Moderna"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
+                                </button>
                             </div>
                         </div>
 
                         <!-- Project 2 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Edifício Comercial" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Edifício Comercial" class="w-full h-64 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Edifício Comercial</h3>
-                                <p class="text-gray-600 mb-4">Projeto completo para edifício comercial com 3 pavimentos, elevador e estacionamento subterrâneo.</p>
+                                <p class="text-gray-600 mb-4">Projeto completo para edifício comercial com 3 pavimentos,
+                                    elevador e estacionamento subterrâneo.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Estrutural</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Estrutural</span>
                                     <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Elétrico</span>
                                 </div>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">Ver detalhes</button>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Edifício Comercial"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
+                                </button>
                             </div>
                         </div>
 
                         <!-- Project 3 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Condomínio Residencial" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                alt="Condomínio Residencial" class="w-full h-64 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Condomínio Residencial</h3>
-                                <p class="text-gray-600 mb-4">Projeto e execução de condomínio com 12 casas, área de lazer completa e segurança 24h.</p>
+                                <p class="text-gray-600 mb-4">Projeto e execução de condomínio com 12 casas, área de
+                                    lazer completa e segurança 24h.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Hidrossanitário</span>
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Construção</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Hidrossanitário</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Construção</span>
                                 </div>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">Ver detalhes</button>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Condomínio Residencial"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
+                                </button>
                             </div>
                         </div>
 
                         <!-- Project 4 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Casa de Campo" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Casa de Campo" class="w-full h-64 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Casa de Campo</h3>
-                                <p class="text-gray-600 mb-4">Projeto arquitetônico e construção de casa de campo com 3 quartos, varanda e vista panorâmica.</p>
+                                <p class="text-gray-600 mb-4">Projeto arquitetônico e construção de casa de campo com 3
+                                    quartos, varanda e vista panorâmica.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
                                     <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">3D</span>
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Construção</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Construção</span>
                                 </div>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">Ver detalhes</button>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Casa de Campo"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
+                                </button>
                             </div>
                         </div>
 
                         <!-- Project 5 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Loja Comercial" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                alt="Loja Comercial" class="w-full h-64 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Loja Comercial</h3>
-                                <p class="text-gray-600 mb-4">Projeto de interiores e reforma para loja comercial com mezanino e fachada moderna.</p>
+                                <p class="text-gray-600 mb-4">Projeto de interiores e reforma para loja comercial com
+                                    mezanino e fachada moderna.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Arquitetônico</span>
                                     <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Elétrico</span>
                                     <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Reforma</span>
                                 </div>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">Ver detalhes</button>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Loja Comercial"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
+                                </button>
                             </div>
                         </div>
 
                         <!-- Project 6 -->
                         <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Apartamento de Luxo" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="Apartamento de Luxo" class="w-full h-64 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Apartamento de Luxo</h3>
-                                <p class="text-gray-600 mb-4">Projeto de interiores e reforma completa para apartamento de alto padrão com 180m².</p>
+                                <p class="text-gray-600 mb-4">Projeto de interiores e reforma completa para apartamento
+                                    de alto padrão com 180m².</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Interiores</span>
+                                    <span
+                                        class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Interiores</span>
                                     <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">3D</span>
                                     <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Reforma</span>
                                 </div>
-                                <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">Ver detalhes</button>
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Apartamento de Luxo"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Ver detalhes no WhatsApp
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -947,17 +1154,21 @@
                     <h2 class="text-2xl font-bold mb-6">Renderizações 3D</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                         <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Renderização 3D - Exterior" class="w-full h-80 object-cover">
+                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                                alt="Renderização 3D - Exterior" class="w-full h-80 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Renderização Externa</h3>
-                                <p class="text-gray-600">Visualize sua casa antes da construção com imagens fotorrealistas de alta qualidade.</p>
+                                <p class="text-gray-600">Visualize sua casa antes da construção com imagens
+                                    fotorrealistas de alta qualidade.</p>
                             </div>
                         </div>
                         <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Renderização 3D - Interior" class="w-full h-80 object-cover">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+                                alt="Renderização 3D - Interior" class="w-full h-80 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Renderização Interna</h3>
-                                <p class="text-gray-600">Ambientes internos detalhados para você visualizar cada espaço do seu projeto.</p>
+                                <p class="text-gray-600">Ambientes internos detalhados para você visualizar cada espaço
+                                    do seu projeto.</p>
                             </div>
                         </div>
                     </div>
@@ -965,8 +1176,12 @@
                     <!-- CTA -->
                     <div class="bg-green-600 text-white p-8 rounded-lg shadow-md text-center">
                         <h2 class="text-2xl font-bold mb-4">Pronto para realizar seu projeto?</h2>
-                        <p class="mb-6">Entre em contato conosco para uma consulta gratuita e orçamento personalizado.</p>
-                        <button class="whatsapp-contact-btn bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg inline-flex items-center gap-2 transition duration-300" data-property="Consulta de Projetos">
+                        <p class="mb-6">Entre em contato conosco para uma consulta gratuita e orçamento personalizado.
+                        </p>
+                        <button
+                            class="whatsapp-contact-btn bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg inline-flex items-center gap-2 transition duration-300"
+                            data-property="Consulta de Projetos"
+                            onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Consulta%20de%20Projetos','_blank')">
                             <i class="fab fa-whatsapp text-green-500"></i>
                             Falar com um especialista
                         </button>
@@ -980,7 +1195,7 @@
             <section class="py-12 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h1 class="text-3xl font-bold mb-8">Imóveis Residenciais</h1>
-                    
+
                     <!-- Filters -->
                     <div class="bg-white p-6 rounded-lg shadow-md mb-8">
                         <h2 class="text-xl font-semibold mb-4">Filtros</h2>
@@ -1017,17 +1232,22 @@
                             </div>
                         </div>
                         <div class="mt-4 flex justify-end">
-                            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Aplicar Filtros</button>
+                            <button
+                                class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Aplicar
+                                Filtros</button>
                         </div>
                     </div>
-                    
+
                     <!-- Properties Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Property 1 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Casa em Condomínio" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Destaque</div>
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Casa em Condomínio" class="h-64 w-full object-cover">
+                                <div
+                                    class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Destaque</div>
                                 <div class="price-tag">R$ 450.000</div>
                             </div>
                             <div class="p-6">
@@ -1043,7 +1263,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Casa em Condomínio - Jardim América">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Casa em Condomínio - Jardim América"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Casa%20em%20Condomínio%20-%20Jardim%20América','_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1053,7 +1276,8 @@
                         <!-- Property 2 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Apartamento Novo" class="h-64 w-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Apartamento Novo" class="h-64 w-full object-cover">
                                 <div class="price-tag">R$ 280.000</div>
                             </div>
                             <div class="p-6">
@@ -1069,7 +1293,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Apartamento Novo - Centro">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Apartamento Novo - Centro"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Apartamento%20Novo%20-%20Centro','_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1079,7 +1306,8 @@
                         <!-- Property 3 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Casa Térrea" class="h-64 w-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Casa Térrea" class="h-64 w-full object-cover">
                                 <div class="price-tag">R$ 320.000</div>
                             </div>
                             <div class="p-6">
@@ -1092,107 +1320,103 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class <div class="flex justify-between items-center mb-4">
+                                            <span class="text-sm text-gray-500">Centro</span>
+                                            <div class="star-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
                                     </div>
+                                    <button
+                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                        data-property="Apartamento Mobiliado - Centro"
+                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Mais informações
+                                    </button>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Casa Térrea - Vila Nova">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Mais informações
-                                </button>
+                            </div>
+
+                            <!-- Property 5 -->
+                            <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Terreno em Condomínio" class="h-64 w-full object-cover">
+                                    <div class="price-tag">R$ 180.000</div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Terreno em Condomínio</h3>
+                                    <p class="text-gray-600 mb-4">500m² • Plano • Documentação OK</p>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-sm text-gray-500">Parque das Flores</span>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                        data-property="Terreno em Condomínio - Parque das Flores"
+                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Mais informações
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Property 6 -->
+                            <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Chácara com Piscina" class="h-64 w-full object-cover">
+                                    <div
+                                        class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                        Novo</div>
+                                    <div class="price-tag">R$ 650.000</div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Chácara com Piscina</h3>
+                                    <p class="text-gray-600 mb-4">4 quartos • 3 banheiros • 1500m²</p>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-sm text-gray-500">Zona Rural</span>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                        data-property="Chácara com Piscina - Zona Rural"
+                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Mais informações
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Property 4 -->
-                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Apartamento Mobiliado" class="h-64 w-full object-cover">
-                                <div class="price-tag">R$ 380.000</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Apartamento Mobiliado</h3>
-                                <p class="text-gray-600 mb-4">3 quartos • 2 banheiros • 85m²</p>
-                                <div class="flex justify-between items-center mb-4">
-                                    <span class="text-sm text-gray-500">Centro</span>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Apartamento Mobiliado - Centro">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Mais informações
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Property 5 -->
-                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Terreno em Condomínio" class="h-64 w-full object-cover">
-                                <div class="price-tag">R$ 180.000</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Terreno em Condomínio</h3>
-                                <p class="text-gray-600 mb-4">500m² • Plano • Documentação OK</p>
-                                <div class="flex justify-between items-center mb-4">
-                                    <span class="text-sm text-gray-500">Parque das Flores</span>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Terreno em Condomínio - Parque das Flores">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Mais informações
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Property 6 -->
-                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Chácara com Piscina" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Novo</div>
-                                <div class="price-tag">R$ 650.000</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Chácara com Piscina</h3>
-                                <p class="text-gray-600 mb-4">4 quartos • 3 banheiros • 1500m²</p>
-                                <div class="flex justify-between items-center mb-4">
-                                    <span class="text-sm text-gray-500">Zona Rural</span>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Chácara com Piscina - Zona Rural">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Mais informações
-                                </button>
-                            </div>
+                        <!-- Pagination -->
+                        <div class="mt-12 flex justify-center">
+                            <nav class="inline-flex rounded-md shadow">
+                                <a href="#"
+                                    class="py-2 px-4 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">Anterior</a>
+                                <a href="#" class="py-2 px-4 bg-green-600 text-white border border-green-600">1</a>
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">2</a>
+                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">3</a>
+                                <a href="#"
+                                    class="py-2 px-4 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">Próxima</a>
+                            </nav>
                         </div>
                     </div>
-                    
-                    <!-- Pagination -->
-                    <div class="mt-12 flex justify-center">
-                        <nav class="inline-flex rounded-md shadow">
-                            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">Anterior</a>
-                            <a href="#" class="py-2 px-4 bg-green-600 text-white border border-green-600">1</a>
-                            <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">2</a>
-                            <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">3</a>
-                            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">Próxima</a>
-                        </nav>
-                    </div>
-                </div>
             </section>
         </div>
 
@@ -1201,7 +1425,7 @@
             <section class="py-12 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h1 class="text-3xl font-bold mb-8">Imóveis Comerciais</h1>
-                    
+
                     <!-- Filters -->
                     <div class="bg-white p-6 rounded-lg shadow-md mb-8">
                         <h2 class="text-xl font-semibold mb-4">Filtros</h2>
@@ -1235,17 +1459,22 @@
                             </div>
                         </div>
                         <div class="mt-4 flex justify-end">
-                            <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Aplicar Filtros</button>
+                            <button
+                                class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Aplicar
+                                Filtros</button>
                         </div>
                     </div>
-                    
+
                     <!-- Properties Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Property 1 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Sala Comercial" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Comercial</div>
+                                <img src="https://images.uns035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                                    alt="Sala Comercial" class="h-64 w-full object-cover">
+                                <div
+                                    class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Comercial</div>
                                 <div class="price-tag">R$ 1.800/mês</div>
                             </div>
                             <div class="p-6">
@@ -1261,7 +1490,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Sala Comercial - Centro Empresarial">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Sala Comercial - Centro Empresarial"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1271,7 +1503,8 @@
                         <!-- Property 2 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80" alt="Loja em Shopping" class="h-64 w-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80"
+                                    alt="Loja em Shopping" class="h-64 w-full object-cover">
                                 <div class="price-tag">R$ 3.500/mês</div>
                             </div>
                             <div class="p-6">
@@ -1287,7 +1520,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Loja em Shopping - Shopping Center">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Loja em Shopping - Shopping Center"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1297,8 +1533,11 @@
                         <!-- Property 3 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1553522911-d9f21af05d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galpão Industrial" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Industrial</div>
+                                <img src="https://images.unsplash.com/photo-1553522911-d9f21af05d0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Galpão Industrial" class="h-64 w-full object-cover">
+                                <div
+                                    class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Industrial</div>
                                 <div class="price-tag">R$ 850.000</div>
                             </div>
                             <div class="p-6">
@@ -1314,7 +1553,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Galpão Industrial - Distrito Industrial">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Galpão Industrial - Distrito Industrial"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1324,7 +1566,8 @@
                         <!-- Property 4 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Loja Térrea" class="h-64 w-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                                    alt="Loja Térrea" class="h-64 w-full object-cover">
                                 <div class="price-tag">R$ 2.200/mês</div>
                             </div>
                             <div class="p-6">
@@ -1340,7 +1583,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Loja Térrea - Centro">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Loja Térrea - Centro"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1350,8 +1596,11 @@
                         <!-- Property 5 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Prédio Comercial" class="h-64 w-full object-cover">
-                                <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Destaque</div>
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Prédio Comercial" class="h-64 w-full object-cover">
+                                <div
+                                    class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    Destaque</div>
                                 <div class="price-tag">R$ 1.200.000</div>
                             </div>
                             <div class="p-6">
@@ -1367,7 +1616,10 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Prédio Comercial - Centro">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Prédio Comercial - Centro"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
@@ -1377,7 +1629,8 @@
                         <!-- Property 6 -->
                         <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
                             <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Terreno Comercial" class="h-64 w-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Terreno Comercial" class="h-64 w-full object-cover">
                                 <div class="price-tag">R$ 450.000</div>
                             </div>
                             <div class="p-6">
@@ -1393,21 +1646,26 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                                <button class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Terreno Comercial - Avenida Principal">
+                                <button
+                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                    data-property="Terreno Comercial - Avenida Principal"
+                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
                                     <i class="fab fa-whatsapp"></i>
                                     Mais informações
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Pagination -->
                     <div class="mt-12 flex justify-center">
                         <nav class="inline-flex rounded-md shadow">
-                            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">Anterior</a>
+                            <a href="#"
+                                class="py-2 px-4 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">Anterior</a>
                             <a href="#" class="py-2 px-4 bg-green-600 text-white border border-green-600">1</a>
                             <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">2</a>
-                            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">Próxima</a>
+                            <a href="#"
+                                class="py-2 px-4 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">Próxima</a>
                         </nav>
                     </div>
                 </div>
@@ -1419,16 +1677,21 @@
             <section class="py-12 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h1 class="text-3xl font-bold mb-8">Financiamento Imobiliário</h1>
-                    
+
                     <!-- Intro -->
                     <div class="bg-white p-6 rounded-lg shadow-md mb-8">
                         <div class="flex flex-col md:flex-row gap-8">
                             <div class="md:w-1/2">
                                 <h2 class="text-2xl font-bold mb-4">Realize o sonho da casa própria</h2>
-                                <p class="text-gray-600 mb-4">Na Casa Certa, além de encontrar o imóvel ideal, você conta com nossa assessoria completa para obter o melhor financiamento para o seu perfil.</p>
-                                <p class="text-gray-600 mb-4">Trabalhamos com os principais bancos do mercado e conseguimos condições especiais para nossos clientes, com taxas diferenciadas e aprovação facilitada.</p>
+                                <p class="text-gray-600 mb-4">Na Casa Certa, além de encontrar o imóvel ideal, você
+                                    conta com nossa assessoria completa para obter o melhor financiamento para o seu
+                                    perfil.</p>
+                                <p class="text-gray-600 mb-4">Trabalhamos com os principais bancos do mercado e
+                                    conseguimos condições especiais para nossos clientes, com taxas diferenciadas e
+                                    aprovação facilitada.</p>
                                 <div class="flex items-center mb-6">
-                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                                         <i class="fas fa-check text-green-600 text-xl"></i>
                                     </div>
                                     <div>
@@ -1437,7 +1700,8 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <div
+                                        class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                                         <i class="fas fa-percentage text-green-600 text-xl"></i>
                                     </div>
                                     <div>
@@ -1447,14 +1711,26 @@
                                 </div>
                             </div>
                             <div class="md:w-1/2">
-                                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Financiamento" class="w-full h-80 object-cover rounded-lg">
+                                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80"
+                                    alt="Financiamento" class="w-full h-80 object-cover rounded-lg">
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Banks -->
                     <h2 class="text-2xl font-bold mb-6">Bancos Parceiros</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                         <!-- Banco 1 -->
                         <div class="bg-white p-6 rounded-lg shadow-md">
-                            <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96970443b3489ad4',t:'MTc1NDIzNjcwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+                            <script>
+                                (function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96970443b3489ad4',t:'MTc1NDIzNjcwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();
+
+                                document.querySelectorAll('.whatsapp-contact-btn').forEach(btn => {
+                                    if (!btn.onclick) {
+                                        const property = btn.getAttribute('data-property') || '';
+                                        btn.onclick = function () {
+                                            window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20' + encodeURIComponent(property), '_blank');
+                                        }
+                                    }
+                                });
+                            </script>
