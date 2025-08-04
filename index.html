@@ -184,7 +184,8 @@
                 <li><a href="residencial.html" class="tab-link block py-2" data-tab="residencial">Residencial</a></li>
                 <li><a href="comercial.html" class="tab-link block py-2" data-tab="comercial">Comercial</a></li>
                 <li><a href="projetos.html" class="tab-link block py-2" data-tab="projetos">Projetos</a></li>
-                <li><a href="financiamento.html" class="tab-link block py-2" data-tab="financiamento">Financiamento</a></li>
+                <li><a href="financiamento.html" class="tab-link block py-2" data-tab="financiamento">Financiamento</a>
+                </li>
                 <li><a href="depoimentos.html" class="tab-link block py-2" data-tab="depoimentos">Depoimentos</a></li>
                 <li><a href="contato.html" class="tab-link block py-2" data-tab="contato">Contato</a></li>
             </ul>
@@ -208,15 +209,15 @@
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">Encontre o imóvel dos seus sonhos</h1>
                     <p class="text-xl mb-8">Há mais de 11 anos realizando sonhos e construindo histórias</p>
                     <div class="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="#"
-                            class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-                            data-tab="residencial">Imóveis Residenciais</a>
-                        <a href="#"
-                            class="tab-link bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-                            data-tab="comercial">Imóveis Comerciais</a>
-                        <a href="#"
-                            class="tab-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-                            data-tab="projetos">Projetos e Construção</a>
+                        <a href="#imoveis-destaque"
+                            class="scroll-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            >Imóveis Residenciais</a>
+                        <a href="#projetos-destaque"
+                            class="scroll-link bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            >Imóveis Comerciais</a>
+                        <a href="#galeria-imoveis"
+                            class="scroll-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                            >Projetos e Construção</a>
                     </div>
                 </div>
             </section>
@@ -276,7 +277,7 @@
             </section>
 
             <!-- Featured Properties -->
-            <section class="py-16 bg-gray-50">
+            <section id="imoveis-destaque" class="py-16 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Imóveis em Destaque</h2>
                     <p class="text-center text-gray-600 mb-12">Confira nossas melhores oportunidades do momento</p>
@@ -385,7 +386,7 @@
             </section>
 
             <!-- Projects Showcase -->
-            <section class="py-16 bg-white">
+            <section id="projetos-destaque" class="py-16 bg-white">
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Projetos em Destaque</h2>
                     <p class="text-center text-gray-600 mb-12">Conheça alguns dos nossos projetos e construções</p>
@@ -675,7 +676,7 @@
             </section>
 
             <!-- Property Gallery -->
-            <section class="py-16 bg-gray-50">
+            <section id="galeria-imoveis" class="py-16 bg-gray-50">
                 <div class="container mx-auto px-4">
                     <h2 class="text-3xl font-bold text-center mb-4">Galeria de Imóveis</h2>
                     <p class="text-center text-gray-600 mb-12">Confira alguns dos nossos imóveis disponíveis</p>
@@ -1260,68 +1261,97 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class </div>
+                                    </div>
+                                    <button
+                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                        data-property="Casa em Condomínio - Jardim América"
+                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Casa%20em%20Condomínio%20-%20Jardim%20América','_blank')">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Mais informações
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Property 2 -->
+                            <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Apartamento Novo" class="h-64 w-full object-cover">
+                                    <div class="price-tag">R$ 280.000</div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Apartamento Novo</h3>
+                                    <p class="text-gray-600 mb-4">2 quartos • 1 banheiro • 65m²</p>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-sm text-gray-500">Centro</span>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                        data-property="Apartamento Novo - Centro"
+                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Apartamento%20Novo%20-%20Centro','_blank')">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Mais informações
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Property 3 -->
+                            <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                        alt="Casa Térrea" class="h-64 w-full object-cover">
+                                    <div class="price-tag">R$ 320.000</div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Casa Térrea</h3>
+                                    <p class="text-gray-600 mb-4">2 quartos • 1 banheiro • 90m²</p>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <span class="text-sm text-gray-500">Vila Nova</span>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class <div class="flex justify-between items-center mb-4">
+                                                <span class="text-sm text-gray-500">Centro</span>
+                                                <div class="star-rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                        </div>
+                                        <button
+                                            class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                            data-property="Apartamento Mobiliado - Centro"
+                                            onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                            <i class="fab fa-whatsapp"></i>
+                                            Mais informações
+                                        </button>
                                     </div>
                                 </div>
-                                <button
-                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
-                                    data-property="Casa em Condomínio - Jardim América"
-                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Casa%20em%20Condomínio%20-%20Jardim%20América','_blank')">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Mais informações
-                                </button>
-                            </div>
-                        </div>
 
-                        <!-- Property 2 -->
-                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Apartamento Novo" class="h-64 w-full object-cover">
-                                <div class="price-tag">R$ 280.000</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Apartamento Novo</h3>
-                                <p class="text-gray-600 mb-4">2 quartos • 1 banheiro • 65m²</p>
-                                <div class="flex justify-between items-center mb-4">
-                                    <span class="text-sm text-gray-500">Centro</span>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                <!-- Property 5 -->
+                                <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                                    <div class="relative">
+                                        <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                            alt="Terreno em Condomínio" class="h-64 w-full object-cover">
+                                        <div class="price-tag">R$ 180.000</div>
                                     </div>
-                                </div>
-                                <button
-                                    class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
-                                    data-property="Apartamento Novo - Centro"
-                                    onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Apartamento%20Novo%20-%20Centro','_blank')">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Mais informações
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Property 3 -->
-                        <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                            <div class="relative">
-                                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                    alt="Casa Térrea" class="h-64 w-full object-cover">
-                                <div class="price-tag">R$ 320.000</div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Casa Térrea</h3>
-                                <p class="text-gray-600 mb-4">2 quartos • 1 banheiro • 90m²</p>
-                                <div class="flex justify-between items-center mb-4">
-                                    <span class="text-sm text-gray-500">Vila Nova</span>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class <div class="flex justify-between items-center mb-4">
-                                            <span class="text-sm text-gray-500">Centro</span>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold mb-2">Terreno em Condomínio</h3>
+                                        <p class="text-gray-600 mb-4">500m² • Plano • Documentação OK</p>
+                                        <div class="flex justify-between items-center mb-4">
+                                            <span class="text-sm text-gray-500">Parque das Flores</span>
                                             <div class="star-rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -1329,94 +1359,64 @@
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                             </div>
+                                        </div>
+                                        <button
+                                            class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                            data-property="Terreno em Condomínio - Parque das Flores"
+                                            onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                            <i class="fab fa-whatsapp"></i>
+                                            Mais informações
+                                        </button>
                                     </div>
-                                    <button
-                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
-                                        data-property="Apartamento Mobiliado - Centro"
-                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Mais informações
-                                    </button>
+                                </div>
+
+                                <!-- Property 6 -->
+                                <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
+                                    <div class="relative">
+                                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                            alt="Chácara com Piscina" class="h-64 w-full object-cover">
+                                        <div
+                                            class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                            Novo</div>
+                                        <div class="price-tag">R$ 650.000</div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold mb-2">Chácara com Piscina</h3>
+                                        <p class="text-gray-600 mb-4">4 quartos • 3 banheiros • 1500m²</p>
+                                        <div class="flex justify-between items-center mb-4">
+                                            <span class="text-sm text-gray-500">Zona Rural</span>
+                                            <div class="star-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
+                                            data-property="Chácara com Piscina - Zona Rural"
+                                            onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
+                                            <i class="fab fa-whatsapp"></i>
+                                            Mais informações
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Property 5 -->
-                            <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                                <div class="relative">
-                                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                        alt="Terreno em Condomínio" class="h-64 w-full object-cover">
-                                    <div class="price-tag">R$ 180.000</div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Terreno em Condomínio</h3>
-                                    <p class="text-gray-600 mb-4">500m² • Plano • Documentação OK</p>
-                                    <div class="flex justify-between items-center mb-4">
-                                        <span class="text-sm text-gray-500">Parque das Flores</span>
-                                        <div class="star-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <button
-                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
-                                        data-property="Terreno em Condomínio - Parque das Flores"
-                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Mais informações
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Property 6 -->
-                            <div class="property-card bg-white rounded-lg overflow-hidden shadow-lg">
-                                <div class="relative">
-                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                                        alt="Chácara com Piscina" class="h-64 w-full object-cover">
-                                    <div
-                                        class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                        Novo</div>
-                                    <div class="price-tag">R$ 650.000</div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Chácara com Piscina</h3>
-                                    <p class="text-gray-600 mb-4">4 quartos • 3 banheiros • 1500m²</p>
-                                    <div class="flex justify-between items-center mb-4">
-                                        <span class="text-sm text-gray-500">Zona Rural</span>
-                                        <div class="star-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <button
-                                        class="whatsapp-contact-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300"
-                                        data-property="Chácara com Piscina - Zona Rural"
-                                        onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20'+encodeURIComponent(this.getAttribute('data-property')),'_blank')">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Mais informações
-                                    </button>
-                                </div>
+                            <!-- Pagination -->
+                            <div class="mt-12 flex justify-center">
+                                <nav class="inline-flex rounded-md shadow">
+                                    <a href="#"
+                                        class="py-2 px-4 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">Anterior</a>
+                                    <a href="#" class="py-2 px-4 bg-green-600 text-white border border-green-600">1</a>
+                                    <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">2</a>
+                                    <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">3</a>
+                                    <a href="#"
+                                        class="py-2 px-4 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">Próxima</a>
+                                </nav>
                             </div>
                         </div>
-
-                        <!-- Pagination -->
-                        <div class="mt-12 flex justify-center">
-                            <nav class="inline-flex rounded-md shadow">
-                                <a href="#"
-                                    class="py-2 px-4 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50">Anterior</a>
-                                <a href="#" class="py-2 px-4 bg-green-600 text-white border border-green-600">1</a>
-                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">2</a>
-                                <a href="#" class="py-2 px-4 bg-white border border-gray-300 hover:bg-gray-50">3</a>
-                                <a href="#"
-                                    class="py-2 px-4 bg-white border border-gray-300 rounded-r-md hover:bg-gray-50">Próxima</a>
-                            </nav>
-                        </div>
-                    </div>
             </section>
         </div>
 
@@ -1722,15 +1722,51 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                         <!-- Banco 1 -->
                         <div class="bg-white p-6 rounded-lg shadow-md">
-                            <script>
-                                (function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96970443b3489ad4',t:'MTc1NDIzNjcwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();
+                            <!-- script removido para ser colocado no final do body -->
+    </main>
 
-                                document.querySelectorAll('.whatsapp-contact-btn').forEach(btn => {
-                                    if (!btn.onclick) {
-                                        const property = btn.getAttribute('data-property') || '';
-                                        btn.onclick = function () {
-                                            window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20' + encodeURIComponent(property), '_blank');
-                                        }
-                                    }
-                                });
-                            </script>
+    <!-- SCRIPTS GLOBAIS -->
+    <script>
+        // WhatsApp button handler
+        document.querySelectorAll('.whatsapp-contact-btn').forEach(btn => {
+            if (!btn.onclick) {
+                const property = btn.getAttribute('data-property') || '';
+                btn.onclick = function () {
+                    window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20' + encodeURIComponent(property), '_blank');
+                }
+            }
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuBtn = document.getElementById('mobile-menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.onclick = function (e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                };
+                // Fecha o menu ao clicar fora
+                document.addEventListener('click', function (event) {
+                    if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== menuBtn) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Smooth scroll for hero links
+            document.querySelectorAll('.scroll-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
