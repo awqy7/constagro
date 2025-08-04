@@ -162,11 +162,9 @@
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="index.html" class="tab-link active" data-tab="home">Home</a></li>
-                    <li><a href="residencial.html" class="tab-link" data-tab="residencial">Residencial</a></li>
-                    <li><a href="comercial.html" class="tab-link" data-tab="comercial">Comercial</a></li>
                     <li><a href="projetos.html" class="tab-link" data-tab="projetos">Projetos</a></li>
                     <li><a href="financiamento.html" class="tab-link" data-tab="financiamento">Financiamento</a></li>
-                    <li><a href="depoimentos.html" class="tab-link" data-tab="depoimentos">Depoimentos</a></li>
+                    
                     <li><a href="contato.html" class="tab-link" data-tab="contato">Contato</a></li>
                 </ul>
             </nav>
@@ -181,12 +179,10 @@
         <div class="md:hidden hidden" id="mobile-menu">
             <ul class="bg-white px-4 pt-2 pb-4 space-y-2">
                 <li><a href="index.html" class="tab-link block py-2" data-tab="home">Home</a></li>
-                <li><a href="residencial.html" class="tab-link block py-2" data-tab="residencial">Residencial</a></li>
-                <li><a href="comercial.html" class="tab-link block py-2" data-tab="comercial">Comercial</a></li>
                 <li><a href="projetos.html" class="tab-link block py-2" data-tab="projetos">Projetos</a></li>
                 <li><a href="financiamento.html" class="tab-link block py-2" data-tab="financiamento">Financiamento</a>
                 </li>
-                <li><a href="depoimentos.html" class="tab-link block py-2" data-tab="depoimentos">Depoimentos</a></li>
+               
                 <li><a href="contato.html" class="tab-link block py-2" data-tab="contato">Contato</a></li>
             </ul>
         </div>
@@ -210,14 +206,14 @@
                     <p class="text-xl mb-8">Há mais de 11 anos realizando sonhos e construindo histórias</p>
                     <div class="flex flex-col md:flex-row justify-center gap-4">
                         <a href="#imoveis-destaque"
-                            class="scroll-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-                            >Imóveis Residenciais</a>
+                            class="scroll-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Imóveis
+                            Residenciais</a>
                         <a href="#projetos-destaque"
-                            class="scroll-link bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-                            >Imóveis Comerciais</a>
+                            class="scroll-link bg-green-800 hover:bg-green-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Imóveis
+                            Comerciais</a>
                         <a href="#galeria-imoveis"
-                            class="scroll-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-                            >Projetos e Construção</a>
+                            class="scroll-link bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Projetos
+                            e Construção</a>
                     </div>
                 </div>
             </section>
@@ -605,7 +601,7 @@
                 <div class="container mx-auto px-4">
                     <div class="flex flex-col md:flex-row items-center gap-10">
                         <div class="md:w-1/2">
-                            <h2 class="text-3xl font-bold mb-6">Casa Certa Imobiliária</h2>
+                            <h2 class="text-3xl font-bold mb-6">ConstAgro </h2>
                             <p class="text-gray-600 mb-4">Há mais de 11 anos no mercado imobiliário, a ConstAgro se
                                 destaca pelo atendimento personalizado e pela excelência em encontrar o imóvel perfeito
                                 para cada cliente.</p>
@@ -627,7 +623,7 @@
                                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
                                     alt="Simão Oliveira" class="w-24 h-24 rounded-full object-cover mb-4">
                                 <h3 class="text-xl font-bold mb-2">Simão Oliveira</h3>
-                                <p class="text-gray-600 text-center mb-4">Fundador e Diretor da Casa Certa Imobiliária
+                                <p class="text-gray-600 text-center mb-4">Fundador e Diretor da ConstAgro Imobiliária
                                 </p>
                                 <p class="text-gray-600 text-center">"Nosso compromisso é realizar sonhos e construir
                                     histórias através de negócios imobiliários seguros e transparentes."</p>
@@ -666,7 +662,7 @@
                         </div>
 
                         <div class="border-t border-gray-200 pt-4">
-                            <p class="text-gray-600 mb-4">Baseado em 48 avaliações</p>
+                            <p class="text-gray-600 mb-4">Baseado em 148 avaliações</p>
                             <a href="https://g.page/r/casa-certa-imobiliaria" target="_blank"
                                 class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Ver
                                 todas as avaliações</a>
@@ -1756,7 +1752,7 @@
 
             // Smooth scroll for hero links
             document.querySelectorAll('.scroll-link').forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
                     if (href && href.startsWith('#')) {
                         e.preventDefault();

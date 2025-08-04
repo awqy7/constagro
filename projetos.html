@@ -1,3 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstAgro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .property-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .property-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+        .bank-logo { filter: grayscale(100%); opacity: 0.7; transition: all 0.3s ease; }
+        .bank-logo:hover { filter: grayscale(0%); opacity: 1; }
+        .whatsapp-button { position: fixed; bottom: 20px; right: 20px; z-index: 1000; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        .modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .testimonial-card { transition: transform 0.3s ease; }
+        .testimonial-card:hover { transform: translateY(-5px); }
+        .price-tag { position: absolute; top: 15px; right: 15px; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px; font-weight: bold; }
+        .gallery-item { overflow: hidden; position: relative; }
+        .gallery-item img { transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-overlay { position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.7); color: white; padding: 10px; transform: translateY(100%); transition: transform 0.3s ease; }
+        .gallery-item:hover .gallery-overlay { transform: translateY(0); }
+        .star-rating { color: #FFD700; }
+        .project-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+        .service-icon { transition: transform 0.3s ease; }
+        .service-card:hover .service-icon { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-3xl font-bold text-green-800">
+                    <span class="text-green-600">Const</span><span class="text-green-900">Agro</span>
+                </div>
+                <span class="ml-2 text-sm text-gray-500 hidden md:inline-block">Há mais de 11 anos no mercado</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="tab-link active" data-tab="home">Home</a></li>
+                    <li><a href="projetos.html" class="tab-link" data-tab="projetos">Projetos</a></li>
+                    <li><a href="financiamento.html" class="tab-link" data-tab="financiamento">Financiamento</a></li>
+                   
+                    <li><a href="contato.html" class="tab-link" data-tab="contato">Contato</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- WhatsApp Button Flutuante -->
+    <a href="https://wa.me/553391080831?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20projetos%20da%20Const%20Agro." class="whatsapp-button bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg" target="_blank">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Projetos em Destaque -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Projetos em Destaque</h2>
+            <p class="text-center text-gray-600 mb-12">Conheça alguns dos nossos projetos e construções</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <img src="area-lazer.jpeg" alt="Área de Lazer" class="h-56 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2">Área de Lazer Moderna</h3>
+                        <p class="text-gray-600 mb-4">Projeto de área de lazer com piscina, churrasqueira e espaço gourmet.</p>
+                        <button class="whatsapp-contact-btn mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Área de Lazer Moderna" onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Área%20de%20Lazer%20Moderna','_blank')">
+                            <i class="fab fa-whatsapp"></i> Ver detalhes no WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <img src="casa1.jpeg" alt="Casa Residencial" class="h-56 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2">Casa Residencial</h3>
+                        <p class="text-gray-600 mb-4">Residência de alto padrão com 3 quartos, suíte e varanda ampla.</p>
+                        <button class="whatsapp-contact-btn mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Casa Residencial" onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Casa%20Residencial','_blank')">
+                            <i class="fab fa-whatsapp"></i> Ver detalhes no WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <img src="predio1.jpeg" alt="Prédio Comercial" class="h-56 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2">Prédio Comercial</h3>
+                        <p class="text-gray-600 mb-4">Projeto de prédio comercial com fachada moderna e salas amplas.</p>
+                        <button class="whatsapp-contact-btn mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Prédio Comercial" onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Prédio%20Comercial','_blank')">
+                            <i class="fab fa-whatsapp"></i> Ver detalhes no WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Projeto 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <img src="pisina1.jpeg" alt="Piscina Residencial" class="h-56 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2">Piscina Residencial</h3>
+                        <p class="text-gray-600 mb-4">Projeto de piscina integrada ao ambiente externo da casa.</p>
+                        <button class="whatsapp-contact-btn mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Piscina Residencial" onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Piscina%20Residencial','_blank')">
+                            <i class="fab fa-whatsapp"></i> Ver detalhes no WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Projeto 5 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <img src="varanda.jpeg" alt="Varanda Gourmet" class="h-56 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2">Varanda Gourmet</h3>
+                        <p class="text-gray-600 mb-4">Espaço gourmet com integração à área externa e churrasqueira.</p>
+                        <button class="whatsapp-contact-btn mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Varanda Gourmet" onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Varanda%20Gourmet','_blank')">
+                            <i class="fab fa-whatsapp"></i> Ver detalhes no WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- Projeto 6 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+                    <img src="cozinha1.jpeg" alt="Cozinha Planejada" class="h-56 w-full object-cover">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2">Cozinha Planejada</h3>
+                        <p class="text-gray-600 mb-4">Cozinha planejada com móveis sob medida e iluminação moderna.</p>
+                        <button class="whatsapp-contact-btn mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition duration-300" data-property="Cozinha Planejada" onclick="window.open('https://wa.me/553391080831?text=Olá!%20Tenho%20interesse%20em%20Cozinha%20Planejada','_blank')">
+                            <i class="fab fa-whatsapp"></i> Ver detalhes no WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
